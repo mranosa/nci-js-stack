@@ -4,7 +4,8 @@ angular.module('nciJsStackApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'angular-flexslider'
 ])
   .config(function ($routeProvider) {
     $routeProvider

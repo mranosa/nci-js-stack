@@ -2,9 +2,9 @@
 
 angular.module('nciJsStackApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.mySlides = [
+      'images/slide_1.jpg',
+      'images/slide_2.jpg',
+      'images/slide_3.jpg'
     ];
   });

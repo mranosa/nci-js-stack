@@ -1,13 +1,12 @@
 <!-- Flex Slider -->
 <section class="slider">
-    <div class="flexslider home">
-        <ul class="slides">            
-            <li><img src="images/slide_1.jpg" style="width: 100%; height: 400px;"/></li>
-            <li><img src="images/slide_2.jpg" style="width: 100%; height: 400px;"/></li>
-            <li><img src="images/slide_3.jpg" style="width: 100%; height: 400px;"/></li>
-        </ul>
-    </div>
+    <flex-slider slide="s in mySlides" class="flexslider home">
+        <li>
+            <img ng-src="{{s}}" style="width: 100%; height: 400px;">
+        </li>
+    </flex-slider>
 </section>
+
 <!-- Flex Slider / End -->
 
 <!-- Recent Work Start -->
