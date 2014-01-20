@@ -5,7 +5,8 @@ angular.module('nciJsStackApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'angular-flexslider'
+  'angular-flexslider',
+  'ng-firebase'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -96,6 +97,10 @@ angular.module('nciJsStackApp', [
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
+      })
+      .when('/admin/list', {
+        templateUrl: 'views/admin/list.html',
+        controller: 'AdminListCtrl'
       })
       .otherwise({
         redirectTo: '/'
