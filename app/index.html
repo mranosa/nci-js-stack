@@ -152,8 +152,9 @@
                     <li>
                         <a href="#/contact">Contact Us</a>
                     </li>
-                    <li style="float: right;">
-                        <a href="#/login">Login</a>
+                    <li style="float: right;" ng-controller="NavCtrl">
+                        <a href="#/login" ng-show="loginShow">Login</a>
+                        <a ng-click="logout()" ng-hide="loginShow">Logout</a>
                     </li>
                 </ul>
             </div> 
@@ -283,6 +284,7 @@
         <script src="scripts/controllers\login.js"></script>
         <script src="scripts/services\NotificationService.js"></script>
         <script src="scripts/controllers/admin\list.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>
