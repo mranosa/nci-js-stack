@@ -12,7 +12,8 @@
     "angular-route": "~1.2.0",
     "pines-notify": "~1.2.0",
     "angular-flexslider": "~1.0.0",
-    "angular-firebase": "~0.0.2"
+    "angular-firebase": "~0.0.2",
+    "angular-local-storage": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

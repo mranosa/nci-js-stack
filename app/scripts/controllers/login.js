@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nciJsStackApp')
-  .controller('LoginCtrl', function ($scope, firebaseCollection, firebaseBinding, NotificationService, $timeout) {
+  .controller('LoginCtrl', function ($scope, firebaseCollection, firebaseBinding, NotificationService, $timeout, localStorageService, $location) {
     
     $scope.loginDisabled = true;
     var adminPromise = firebaseBinding('https://nci-website.firebaseio.com/admin', $scope, 'admin');
@@ -10,6 +10,8 @@ angular.module('nciJsStackApp')
   			NotificationService.info("Checking Credentials.", "Please wait...");
   			if(admin.username === $scope.username && admin.password === $scope.password){
   				$timeout(function() {
+  					localStorageService.add('nci-admin','admin');
+  					$location.path("/materials");
 			        NotificationService.success("Login Successful.", "Welcome Admin");
 			    }, 1000);
   			} else {

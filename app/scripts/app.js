@@ -6,7 +6,8 @@ angular.module('nciJsStackApp', [
   'ngSanitize',
   'ngRoute',
   'angular-flexslider',
-  'ng-firebase'
+  'ng-firebase',
+  'LocalStorageModule'
 ])
   .config(function ($routeProvider) {
     $routeProvider
