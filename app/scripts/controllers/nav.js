@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nciJsStackApp')
-  .controller('NavCtrl', function ($scope, localStorageService, NotificationService, $location) {
+  .controller('NavCtrl', function ($scope, localStorageService, NotificationService, $location, $rootScope) {
     $scope.loginShow = true;
 
     if(localStorageService.get('nci-admin')){
@@ -13,6 +13,7 @@ angular.module('nciJsStackApp')
     	NotificationService.success("Logout Successful.", "Bye boss.");
 		$scope.loginShow = true;
 		localStorageService.remove('nci-admin');
+		$rootScope.$broadcast('logout');
     }
 
     $scope.$on('login', function () {
